@@ -8,11 +8,11 @@ Content-Type: application/json
 }
 
 ### Find a user with a given id
-GET http://localhost:3000/auth/4
+GET http://localhost:3000/auth/1 
 
 
 ### Find all users with a given email
-GET http://localhost:3000/auth/?email=abc123@gmail.com
+GET http://localhost:3000/auth/?email=abc@gmail.com
 
 
 ### Delete a user with a given id
