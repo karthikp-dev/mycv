@@ -3,7 +3,16 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-    "email":"sai@gmail.com",
+    "email":"karthik@gmail.com",
+    "password":"mlpzaq123"
+}
+
+### signin as an existing user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email":"karthik@gmail.com",
     "password":"mlpzaq123"
 }
 
@@ -15,6 +24,12 @@ Content-Type: application/json
     "email":"sai@gmail.com",
     "password":"mlpzaq123"
 }
+
+### ge the currently signed in user.
+GET http://localhost:3000/auth/whoAmI
+
+### signout
+POST http://localhost:3000/auth/signout
 
 ### Find a user with a given id
 GET http://localhost:3000/auth/1 
