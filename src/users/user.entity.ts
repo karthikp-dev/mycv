@@ -4,8 +4,11 @@ import {
   AfterRemove,
   Entity,
   Column,
-  PrimaryGeneratedColumn
+  PrimaryGeneratedColumn,
+  OneToMany
 } from 'typeorm';
+import { Report } from 'src/reports/report.entity';
+import { BooleanLiteral } from 'typescript';
 
 @Entity()
 export class User {
@@ -17,6 +20,12 @@ export class User {
 
   @Column()
   password: string;
+
+  @Column({ default: true })
+  admin: boolean;
+
+  @OneToMany(() => Report, (report) => report.user)
+  reports: Report[];
 
   @AfterInsert()
   logInsert() {
